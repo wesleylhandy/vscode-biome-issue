@@ -1,0 +1,28 @@
+{
+    "name": "vscode-biome-issue",
+    "version": "1.0.0",
+    "description": "Demo of Biome VSCode Extension not providing quickfix for rules disabling",
+    "main": "index.js",
+    "repository": "https://github.com/wesleylhandy/vscode-biome-issue.git",
+    "author": "whandy <whandy@costar.com>",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "ts-node": "^10.9.2",
+        "typescript": "^5.4.5"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "1.7.3",
+        "@types/node": "^18.0.0"
+    },
+    "scripts": {
+        "lint": "yarn biome:format && yarn biome:lint",
+        "lint:build": "yarn biome:format:build && yarn biome:format:build",
+        "biome:format:changed": "yarn biome format . --changed --write",
+        "biome:format": "yarn biome format . --write",
+        "biome:format:build": "yarn biome format .",
+        "biome:lint": "yarn biome lint --apply --log-level=error --max-diagnostics=100 --no-errors-on-unmatched --diagnostic-level=error . ",
+        "biome:lint:build": "yarn biome lint --log-level=error --max-diagnostics=100 --no-errors-on-unmatched --diagnostic-level=error . ",
+        "type-check": "tsc --noEmit --skipLibCheck --excludeDirectories ./i18n"
+    }
+}

@@ -1,0 +1,13 @@
+node_modules/
+dist/
+**/.DS_Store
+/i18n/
+/publish/helm/charts/*.tgz
+yarn-error.log
+.eslintcache
+
+# Environment
+.env
+cypress.env.json
+cypress.env.*.json
+Dockerfile.local
